@@ -195,11 +195,34 @@ function Scene({ isDark }: { isDark: boolean }) {
 
 // Animated Hero Component
 function AnimatedHero({ isDark }: { isDark: boolean }) {
-  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.3 })
-  const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation({ threshold: 0.5 })
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.4 })
-  const { elementRef: badgesRef, isVisible: badgesVisible } = useScrollAnimation({ threshold: 0.3 })
-
+  const {
+    elementRef: heroRef,
+    isVisible: heroVisible,
+  } = useScrollAnimation({ threshold: 0.3 }) as {
+    elementRef: React.RefObject<HTMLDivElement>;
+    isVisible: boolean;
+  };
+  const {
+    elementRef: imageRef,
+    isVisible: imageVisible,
+  } = useScrollAnimation({ threshold: 0.5 }) as {
+    elementRef: React.RefObject<HTMLDivElement>;
+    isVisible: boolean;
+  };
+  const {
+    elementRef: titleRef,
+    isVisible: titleVisible,
+  } = useScrollAnimation({ threshold: 0.5 }) as {
+    elementRef: React.RefObject<HTMLDivElement>;
+    isVisible: boolean;
+  };
+  const {
+    elementRef: badgesRef,
+    isVisible: badgesVisible,
+  } = useScrollAnimation({ threshold: 0.3 }) as {
+    elementRef: React.RefObject<HTMLDivElement>;
+    isVisible: boolean;
+  };
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
@@ -378,6 +401,13 @@ export default function Portfolio() {
                     className={`relative ${isDark ? "text-gray-300 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"} transition-all duration-300 group font-medium`}
                   >
                     About
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 group-hover:w-full transition-all duration-300"></span>
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("skills")}
+                    className={`relative ${isDark ? "text-gray-300 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"} transition-all duration-300 group font-medium`}
+                  >
+                    Skills
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-800 group-hover:w-full transition-all duration-300"></span>
                   </button>
                   <button

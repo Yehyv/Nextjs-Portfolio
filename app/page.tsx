@@ -1129,17 +1129,6 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <AnimatedSection animation="fadeIn" duration={0.8}>
-          <footer className={`py-8 px-4 border-t ${isDark ? "border-gray-700" : "border-gray-200"}`}>
-            <div className="container mx-auto text-center">
-              <p className={`${isDark ? "text-gray-400" : "text-gray-600"}`}>
-                © 2024 John Doe. All rights reserved. Built with Next.js and Three.js
-              </p>
-            </div>
-          </footer>
-        </AnimatedSection>
       </div>
     </div>
   )

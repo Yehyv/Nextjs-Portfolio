@@ -236,29 +236,29 @@ function AnimatedHero({ isDark }: { isDark: boolean }) {
             imageVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
-          <div className="relative">
-            {/* Background decorative elements */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
-            <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-xl"></div>
+        <div className="relative">
+          {/* Background decorative elements */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
+          <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-xl"></div>
 
-            {/* Main image container */}
-            <div className="relative w-48 h-48 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-1">
-                <div className={`w-full h-full ${isDark ? "bg-gray-800" : "bg-white"} rounded-full p-2`}>
-                  <img
-                    src="/placeholder.svg?height=200&width=200"
-                    alt="John Doe"
-                    className="w-full h-full rounded-full object-cover"
-                  />
-                </div>
+          {/* Main image container */}
+          <div className="relative w-48 h-48 mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full p-1">
+              <div className={`w-full h-full ${isDark ? "bg-gray-800" : "bg-white"} rounded-full overflow-hidden`}>
+                <img
+                  src="/dane-wetton-vzticETKMYU-unsplash.jpg"
+                  alt="John Doe"
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              {/* Floating accent dots */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 -left-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-500"></div>
             </div>
           </div>
+
+          {/* Floating accent dots */}
+          <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full animate-pulse"></div>
+          <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 -left-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-500"></div>
+        </div>
         </div>
 
         <div
